@@ -167,7 +167,7 @@
 }
 
 .result-display .label {
-    -fx-text-fill: derive(#102c44, 70%) !important;
+    -fx-text-fill: white !important;
 }
 
 .status-bar .label {
