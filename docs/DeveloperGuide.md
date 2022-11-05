@@ -778,14 +778,32 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
     Use case ends.
 
-**Use case: Hide all contact's phone number**
+**Use case: Hide contacts' phone number**
 
 **MSS**
 
-1.  User requests phone number to be hidden.
-2.  SoConnect removes phone number from displaying in the contact.
+1. User requests phone number to be hidden.
+2. SoConnect no longer displays phone number of each contact.
 
     Use case ends.
+
+**Use case: Show contacts' phone number**
+
+**MSS**
+
+1. User requests phone number to be shown.
+2. SoConnect now displays phone number of each contact.
+
+   Use case ends.
+
+**Use case: Order contacts' details**
+
+**MSS**
+
+1. User requests details to be shown in the following order: address, email, phone number, tags.
+2. SoConnect now displays in the following order: address, email, phone number, tags.
+
+   Use case ends.
 
 ### Non-Functional Requirements
 
