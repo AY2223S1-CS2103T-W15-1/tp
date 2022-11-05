@@ -558,6 +558,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 | `* *`    | user                    | search with multiple tags                              | narrow my search results to only contacts that have all the specified tags |
 | `* *`    | user                    | search with multiple tags                              | broaden my result results to contacts that have any of the specified tags  |
 | `* *`    | user                    | view contacts related to my search query               | find contacts even when I mistype their name                               |
+| `*`      | user                    | customise the order of information for contacts        | view more important information before others                              |
 | `* *`    | user                    | hide contact details                                   | focus on certain information of each contact                               |
 | `* *`    | user                    | show contact details                                   | view certain information of each contact                                   |
 | `* *`    | user                    | have an autocomplete for my current search query       | search faster by names and minimize the chance of an unsuccessful search   |
@@ -570,7 +571,6 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 | `* *`    | user                    | edit a todo                                            | update it or correct my mistakes                                           |
 | `* *`    | user                    | clear all my todos                                     | save time on deleting them one by one                                      |
 | `* *`    | user                    | filter the list of todos shown                         | only view the portion of list I need at the moment                         |
-| `*`      | user                    | customise the order of information for contacts        | view more important information before others                              |
 
 ### Use cases
 
@@ -700,7 +700,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
     Use case ends.
 
-**Use case: Hide contacts' phone number**
+**Use case: Hide phone number of all contacts**
 
 **MSS**
 
@@ -709,16 +709,16 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
     Use case ends.
 
-**Use case: Show contacts' phone number**
+**Use case: Show phone number of all contacts**
 
 **MSS**
 
 1. User requests phone number to be shown.
-2. SoConnect now displays phone number of each contact.
+2. SoConnect now displays phone number of all contacts.
 
    Use case ends.
 
-**Use case: Order contacts' details**
+**Use case: Order contact details**
 
 **MSS**
 
