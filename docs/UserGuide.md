@@ -41,6 +41,8 @@ This section gives you information on how to install SoConnect and how to start 
 
 ## Command Line Interface Tutorial
 
+If you already know about [Command Line Interface (CLI)](#CLI), you can skip this part and read [Command Format](#Command Format).
+
 1. To use the [Command Line Interface (CLI)](#CLI), you can type a [command](#Command), which is supposed to be typed in a certain [format](#Command Format), in the command box and press Enter. SoConnect will perform a specific action. e.g. typing **`help`** and pressing Enter will open the help window.<br>
 
 2. You can refer to the [Command Summary](#Command Summary) for the full list of commands.
@@ -49,7 +51,7 @@ This section gives you information on how to install SoConnect and how to start 
 
 ## Command Format
 
-To use SoConnect features, the [commands](#Command) typed in the [Command Line Interface (CLI)](#CLI) have to be in a certain format. The format required for each feature can be found in [Command Summary](#Command Summary) and [Features](#features).
+To use SoConnect features, the [commands](#Command) you type in the [Command Line Interface (CLI)](#CLI) have to be in a certain format. The format required for each feature can be found in [Command Summary](#Command Summary) and [Features](#features).
 
 <div markdown="block" class="alert alert-info"> 
 
