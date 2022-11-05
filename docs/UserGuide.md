@@ -16,7 +16,7 @@ This section gives you information on how to install SoConnect and how to start 
 
 ## Installation Tutorial
 
-1. Ensure you have Java `11` or above installed in your Computer.
+1. Ensure you have [Java 11](https://www.oracle.com/java/technologies/downloads/#java11) or above installed in your Computer.
 
 2. Download the latest `SoConnect.jar` from [here](https://github.com/AY2223S1-CS2103T-W15-1/tp/releases).
 
@@ -25,13 +25,11 @@ This section gives you information on how to install SoConnect and how to start 
 4. Double-click the file to start the app. A GUI similar to the one below should appear in a few seconds. Note how the app contains some sample data.<br>
    ![Ui](images/Ui.png)
 
-## Command Line Interface Tutorial
-
-1. To use the [Command Line Interface (CLI)](#CLI), you can type a [command](#Command) in the command box and press Enter. SoConnect will perform a specific action. e.g. typing **`help`** and pressing Enter will open the help window.<br>
+5. You can use the [Command Line Interface (CLI)](#CLI) to use SoConnect features.
 
 <div markdown="block" class="alert alert-info">  
 
-**:information_source: Some example commands you can try:**<br>
+**:information_source: Some example commands that you can try to use in the CLI:**<br>
 
 * **`list`** : Lists all contacts.
 * **`add`**`n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01` : Adds a contact named `John Doe` to your SoConnect.
@@ -41,30 +39,40 @@ This section gives you information on how to install SoConnect and how to start 
 
 </div>
 
+## Command Line Interface Tutorial
+
+1. To use the [Command Line Interface (CLI)](#CLI), you can type a [command](#Command), which is supposed to be typed in a certain [format](#Command Format), in the command box and press Enter. SoConnect will perform a specific action. e.g. typing **`help`** and pressing Enter will open the help window.<br>
+
 2. You can refer to the [Command Summary](#Command Summary) for the full list of commands.
 
 3. You can also refer to the [Features](#features) below for details of each command.
 
 ## Command Format
 
-* Words in `UPPER_CASE` are the parameters to be supplied by the user.<br>
-  e.g. in `add n/NAME`, `NAME` is a parameter which can be used as `add n/John Doe`.
+To use SoConnect features, the [commands](#Command) typed in the [Command Line Interface (CLI)](#CLI) have to be in a certain format. The format required for each feature can be found in [Command Summary](#Command Summary) and [Features](#features).
+
+<div markdown="block" class="alert alert-info"> 
+
+**:information_source: Note:**<br>
+
+* Words in `UPPER_CASE` are the [parameters](#Parameter) to be supplied by the user.<br>
+  e.g. in `add n/NAME`, `NAME` is a [parameter](#Parameter) which can be used as `add n/John Doe`.
 
 * Items with `…`​ after them can be used multiple times including zero times.<br>
   e.g. `[t/TAG]…​` can be used as ` ` (i.e. 0 times), `t/friend`, `t/friend t/family`, etc.
 
-* Parameters can be in any order unless explicitly stated otherwise.<br>
+* [Parameters](#Parameter) can be in any order unless explicitly stated otherwise.<br>
   e.g. if the command specifies `n/NAME p/PHONE_NUMBER`, `p/PHONE_NUMBER n/NAME` is also acceptable.
 
-* If a parameter is expected only once in the command but you specified it multiple times, only the last occurrence of the parameter will be taken.<br>
+* If a [parameter](#Parameter) is expected only once in the [command](#Command) but you specified it multiple times, only the last occurrence of the [parameter](#Parameter) will be taken.<br>
   e.g. if you specify `p/12341234 p/56785678`, only `p/56785678` will be taken.
 
-* Extraneous parameters for commands that do not take in parameters (such as `help`, `list`, `exit` and `clear`) will be ignored.<br>
+* Irrelevant [parameters](#Parameter) for [commands](#Command) that do not take in [parameters](#Parameter) (such as `help`, `list`, `exit` and `clear`) will be ignored.<br>
   e.g. if the command specifies `help 123`, it will be interpreted as `help`.
 
-* Tasks will be referred to as Todos
+* `INDEX` is used in [commands](#Command) to refer to a specific contact or todo by their index number on the currently displayed contact list and todo list. The `INDEX` **must be a positive non-zero integer** 1, 2, 3, …​ <a id="command-format-index"></a>
 
-* `INDEX` is used in commands to refer to a specific contact or todo by their index number on the currently displayed contact list and todo list. The `INDEX` **must be a positive non-zero integer** 1, 2, 3, …​ <a id="command-format-index"></a>
+</div>
 
 # Features
 
@@ -511,6 +519,8 @@ If your changes to the data file makes its format invalid, SoConnect will discar
 <a id="CLI"></a>
 * **CLI**: Command Line Interface (CLI) is a text-based user interface used to run programs.
 * **GUI**: Graphical User Interface (GUI) is a form of user interface that allows users to interact with programs through graphical icons and audio indicator.
+<a id="Parameter"></a>
+* **Parameter**: A piece of information that is to be used in application.
 * **JavaFX**: A Java library used to develop client applications.
 * **kLoC**: Stands for thousands of lines of code.
 * **NUS**: National University of Singapore.
