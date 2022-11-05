@@ -12,6 +12,10 @@ SoConnect is a **desktop app for managing contacts and tasks**. It aims to help 
 
 # Quick start
 
+This section gives you information on how to install SoConnect and how to start using it. SoConnect uses a [Command Line Interface (CLI)](#CLI) which is where [commands](#Command), which are typed in a certain [format](#Command Format), are entered to use SoConnect features.
+
+## Installation Tutorial
+
 1. Ensure you have Java `11` or above installed in your Computer.
 
 1. Download the latest `SoConnect.jar` from [here](https://github.com/AY2223S1-CS2103T-W15-1/tp/releases).
@@ -21,28 +25,27 @@ SoConnect is a **desktop app for managing contacts and tasks**. It aims to help 
 1. Double-click the file to start the app. A GUI similar to the one below should appear in a few seconds. Note how the app contains some sample data.<br>
    ![Ui](images/Ui.png)
 
-1. Type the command in the command box and press Enter to execute it. e.g. typing **`help`** and pressing Enter will open the help window.<br>
-   Some example commands you can try:
+## Command Line Interface Tutorial
 
-   * **`list`** : Lists all contacts.
+1. To use the [Command Line Interface (CLI)](#CLI), you can type a [command](#Command) in the command box and press Enter. SoConnect will perform a specific action. e.g. typing **`help`** and pressing Enter will open the help window.<br>
 
-   * **`add`**`n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01` : Adds a contact named `John Doe` to your SoConnect.
+<div markdown="block" class="alert alert-info">  
 
-   * **`delete`**`3` : Deletes the 3rd contact shown in the current list.
+**:information_source: Some example commands you can try:**<br>
 
-   * **`clear`** : Deletes all contacts.
+* **`list`** : Lists all contacts.
+* **`add`**`n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01` : Adds a contact named `John Doe` to your SoConnect.
+* **`delete`**`3` : Deletes the 3rd contact shown in the current list.
+* **`clear`** : Deletes all contacts.
+* **`exit`** : Exits SoConnect.
 
-   * **`exit`** : Exits SoConnect.
+</div>
 
-1. Refer to the [Features](#features) below for details of each command.
+2. You can refer to the [Command Summary](#Command Summary) for the full list of commands.
 
---------------------------------------------------------------------------------------------------------------------
+3. You can also refer to the [Features](#features) below for details of each command.
 
-# Features
-
-<div markdown="block" class="alert alert-info">
-
-**:information_source: Notes about the command format:**<br>
+## Command Format
 
 * Words in `UPPER_CASE` are the parameters to be supplied by the user.<br>
   e.g. in `add n/NAME`, `NAME` is a parameter which can be used as `add n/John Doe`.
@@ -63,7 +66,7 @@ SoConnect is a **desktop app for managing contacts and tasks**. It aims to help 
 
 * `INDEX` is used in commands to refer to a specific contact or todo by their index number on the currently displayed contact list and todo list. The `INDEX` **must be a positive non-zero integer** 1, 2, 3, …​ <a id="command-format-index"></a>
 
-</div>
+# Features
 
 ## Contact Management Features
 
@@ -261,49 +264,51 @@ Example:
 
 ## Customisation Features
 
+You can use the customisation features to customise the displayed information in the contact list.
+
 ### Customising order of details: `customise order`
 
-Customise the order of information shown in all contacts shown.
+You can customise the order of information shown in all contacts shown.
 
 Format: `customise order [t/] [p/] [e/] [a/]`
 
-* Name of contact will always be at the top of each contact and cannot have its order changed.
-* Information that can have its order changed: Tags, Phone Number, Email, Address.
-* Information that are not specified will be ordered last and follow the default order. (Tags > Phone Number > Email > Address)
+* You will always see the name of contact at the top of each contact.
+* You can change the order of the following information: Tags, Phone Number, Email, Address.
+* Information that you do not specify will be ordered last and follow the default order. (Tags > Phone Number > Email > Address)
 
 Example:
 
-* `customise order a/ e/ p/` The application will show address first, followed by email, phone number, then tags.
-* `customise order a/` The application will show address first. The rest of the information will follow the default order. Therefore, address will be followed by tags, phone number and then email.
+* `customise order a/ e/ p/` SoConnect will show address first, followed by email, phone number, then tags.
+* `customise order a/` SoConnect will show address first. The rest of the information will follow the default order. Therefore, address will be followed by tags, phone number and then email.
 
 ### Hiding contact details: `customise hide`
 
-Hide certain information of all contacts displayed.
+You can hide certain information of all contacts displayed.
 
 Format: `customise hide [t/] [p/] [e/] [a/]`
 
-* Information that can be hidden: Tags, Phone Number, Email, Address.
-* After using the command, the information specified is hidden.
-* If the information specified is already hidden, it will stay hidden.
+* You can hide the following information: Tags, Phone Number, Email, Address.
+* After you use this command, the information specified is hidden.
+* If the information that you specified is already hidden, it will stay hidden.
 
 Example:
-* `customise hide e/` The application no longer shows emails in the list of contacts.
-* `customise hide p/ t/` The application no longer shows phone numbers and tags in the list of contacts.
+* `customise hide e/` SoConnect no longer shows emails in the list of contacts.
+* `customise hide p/ t/` SoConnect no longer shows phone numbers and tags in the list of contacts.
 
 ### Showing contact details: `customise show`
 
-Show certain information of all contacts displayed.
+You can show certain information of all contacts displayed.
 
 Format: `customise show [t/] [p/] [e/] [a/]`
 
-* Information that can be changed from being hidden to being shown: Tags, Phone Number, Email, Address.
-* After using the command, the information specified is shown.
-* If the information specified is already shown, it will stay shown.
+* You can show the following information: Tags, Phone Number, Email, Address.
+* After you use this command, the information specified is shown.
+* If the information that you specified is already shown, it will stay shown.
 * `Coming soon in v1.5`, we will include `customise show all`, a shortcut to show all information.
 
 Example:
-* `customise show a/` The application now shows addresses in the list of contacts.
-* `customise show p/ t/` The application now shows phone numbers and tags in the list of contacts.
+* `customise show a/` SoConnect now shows addresses in the list of contacts.
+* `customise show p/ t/` SoConnect now shows phone numbers and tags in the list of contacts.
 
 ## Todo Management Features
 
@@ -390,7 +395,7 @@ Examples:
 
 ### Viewing help : `help`
 
-Shows a message explaning how to access the help page.
+Shows a message explaining how to access the help page.
 
 ![help message](images/helpMessage.png)
 
@@ -430,8 +435,11 @@ If your changes to the data file makes its format invalid, SoConnect will discar
 # Glossary
 
 * **Mainstream OS**: Windows, Linux, Unix, OS-X.
-* **CLI**: A text-based user interface used to run programs.
-* **GUI**: A graphical user interface (GUI) is a form of user interface that allows users to interact with programs through graphical icons and audio indicator.
+<a id="Command"></a>
+* **Command**: An instruction that causes an application to perform a specific action.
+<a id="CLI"></a>
+* **CLI**: Command Line Interface (CLI) is a text-based user interface used to run programs.
+* **GUI**: Graphical User Interface (GUI) is a form of user interface that allows users to interact with programs through graphical icons and audio indicator.
 * **JavaFX**: A Java library used to develop client applications.
 * **kLoC**: Stands for thousands of lines of code.
 * **NUS**: National University of Singapore.
@@ -440,26 +448,29 @@ If your changes to the data file makes its format invalid, SoConnect will discar
 * **Autocomplete**: A feature that shows a list of completed words or strings without the user needing to type them in full.
 * **Todo**: A task that the user needs to complete. <a id="glossary-todo"></a>
 
-# Command summary
+# Command Summary
 
-| Action          | Format, Examples                                                                                                                                                                                                     |
-|-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Add**         | `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS` <br> e.g. `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665`                                                                                |
-| **Clear**       | `clear`                                                                                                                                                                                                              |
-| **Customise**   | `customise order [t/] [p/] [e/] [a/]` <br> `customise hide [t/] [p/] [e/] [a/]` <br> `customise show [t/] [p/] [e/] [a/]` <br> e.g. `customise order a/ p/` `customise hide a/ e/ p/` `customise show a/`            |
-| **Delete**      | `delete INDEX`<br> e.g. `delete 3`                                                                                                                                                                                   |
-| **Edit**        | `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS]`<br> e.g. `edit 2 n/James Lee e/jameslee@example.com`                                                                                                    |
-| **Search**      | `search [CONDITION] [n/NAME] [p/PHONE_NUMBER]…​`<br> e.g. `seach or n/John Doe t/cs2103t`                                                                                                                         |
-| **List**        | `list`                                                                                                                                                                                                               |
-| **Sort**        | `sort [n/] [p/] [e/] [a/] [t/TAG]…​` <br> e.g. `sort t/!friend n/`                                                                                                                                                |
-| **Help**        | `help`                                                                                                                                                                                                               |
-| **Create Tag**  | `tag create t/TAG` <br> e.g. `tag create t/friend`                                                                                                                                                                   |
-| **Edit Tag**    | `tag edit t/TAG1 t/TAG2`  <br> e.g. `tag edit t/friend t/bestFriend`                                                                                                                                                 |
-| **Add Tag**     | `tag add INDEX t/TAG` <br> e.g. `tag add 1 t/friend`                                                                                                                                                                 |
-| **Delete Tag**  | `tag delete t/TAG` <br> e.g. `tag delete t/friend`                                                                                                                                                                   |
-| **Remove Tag**  | `tag remove INDEX t/TAG` <br> e.g. `tag remove 1 t/friend`                                                                                                                                                           |
-| **Add Todo**    | `todo add d/DESCRIPTION date/DATE pr/PRIORITY [t/TAG]…​` <br> e.g. `todo add d/Revise priority/high`                                                                                                              |
-| **Edit Todo**   | `todo edit INDEX [d/DESCRIPTION] [date/DATE] [pr/PRIORITY] [t/TAG]…​` <br> e.g. `todo edit t/CS2101`                                                                                                              |
-| **Delete Todo** | `todo delete INDEX` <br> e.g. `todo delete 3`                                                                                                                                                                        |
-| **Clear Todo**  | `todo clear`                                                                                                                                                                                                         |
-| **Show Todo**   | `todo show`<br> `todo show today` <br> `todo show date/DATE` <br> `todo show date/DATE to DATE` <br> `todo show t/TAG` <br> `todo show pr/Priority` <br> e.g. `todo show`, `todo show pr/high`, `todo show t/CS2100` |
+| Action                                                                  | Format and Examples                                                                                                                                                                                                  |
+|-------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [**Add contact**](#Adding a contact: `add`)                             | `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS` <br> e.g. `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665`                                                                                |
+| [**Edit contact**](#Editing a contact: `edit`)                          | `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS]`<br> e.g. `edit 2 n/James Lee e/jameslee@example.com`                                                                                                    |
+| [**List all contacts**](#Listing all contacts: `list`)                  | `list`                                                                                                                                                                                                               |
+| [**Search contact**](#Searching for a contact: `search`)                | `search [CONDITION] [n/NAME] [p/PHONE_NUMBER]…​`<br> e.g. `seach or n/John Doe t/cs2103t`                                                                                                                            |
+| [**Sort contacts**](#Sorting contacts: `sort`)                          | `sort [n/] [p/] [e/] [a/] [t/TAG]…​` <br> e.g. `sort t/!friend n/`                                                                                                                                                   |
+| [**Delete contact**](#Deleting a contact: `delete`)                     | `delete INDEX`<br> e.g. `delete 3`                                                                                                                                                                                   |
+| [**Clear all contacts**](#Clearing all contacts: `clear`)               | `clear`                                                                                                                                                                                                              |
+| [**Create Tag**](#Creating a Tag: `tag create`)                         | `tag create t/TAG` <br> e.g. `tag create t/friend`                                                                                                                                                                   |
+| [**Add Tag**](#Adding a Tag to a Contact: `tag add`)                    | `tag add INDEX t/TAG` <br> e.g. `tag add 1 t/friend`                                                                                                                                                                 |
+| [**Edit Tag**](#Editing a Tag: `tag edit`)                              | `tag edit t/TAG1 t/TAG2`  <br> e.g. `tag edit t/friend t/bestFriend`                                                                                                                                                 |
+| [**Remove Tag**](#Removing a Tag from a Contact: `tag remove`)          | `tag remove INDEX t/TAG` <br> e.g. `tag remove 1 t/friend`                                                                                                                                                           |
+| [**Delete Tag**](#Deleting a Tag: `tag delete`)                         | `tag delete t/TAG` <br> e.g. `tag delete t/friend`                                                                                                                                                                   |
+| [**Customise order**](#Customising order of details: `customise order`) | `customise order [t/] [p/] [e/] [a/]` <br> e.g. `customise order a/ p/`                                                                                                                                              |
+| [**Hide contact details**](#Hiding contact details: `customise hide`)   | `customise hide [t/] [p/] [e/] [a/]`  <br> e.g. `customise hide a/ e/ p/`                                                                                                                                            |
+| [**Show contact details**](#Showing contact details: `customise show`)  | `customise show [t/] [p/] [e/] [a/]` <br> e.g. `customise show a/`                                                                                                                                                   |
+| [**Add Todo**](#Adding a todo: `todo add`)                              | `todo add d/DESCRIPTION date/DATE pr/PRIORITY [t/TAG]…​` <br> e.g. `todo add d/Revise priority/high`                                                                                                                 |
+| [**Edit Todo**](#Editing a todo: `todo edit`)                           | `todo edit INDEX [d/DESCRIPTION] [date/DATE] [pr/PRIORITY] [t/TAG]…​` <br> e.g. `todo edit t/CS2101`                                                                                                                 |
+| [**Delete Todo**](#Deleting a todo: `todo delete`)                      | `todo delete INDEX` <br> e.g. `todo delete 3`                                                                                                                                                                        |
+| [**Clear Todo**](#Clearing all todos: `todo clear`)                     | `todo clear`                                                                                                                                                                                                         |
+| [**Show Todo**](#Filtering todos shown: `todo show`)                    | `todo show`<br> `todo show today` <br> `todo show date/DATE` <br> `todo show date/DATE to DATE` <br> `todo show t/TAG` <br> `todo show pr/Priority` <br> e.g. `todo show`, `todo show pr/high`, `todo show t/CS2100` |
+| [**Help**](#Viewing help: `help`)                                       | `help`                                                                                                                                                                                                               |
+| [**Exit**](#Exiting the program: `exit`)                                | `exit`                                                                                                                                                                                                               |
